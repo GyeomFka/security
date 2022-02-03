@@ -1,6 +1,6 @@
 ### Spring Security 강의
 
-####[메타코딩-Youtube](https://www.youtube.com/watch?v=GEv_hw0VOxE&list=PL93mKxaRDidERCyMaobSLkvSPzYtIk0Ah&index=1)
+#### [메타코딩-Youtube](https://www.youtube.com/watch?v=GEv_hw0VOxE&list=PL93mKxaRDidERCyMaobSLkvSPzYtIk0Ah&index=1)
 
 - 1강 - 환경설정 [V]
 - 2강 - 시큐리티 설정 [V]
