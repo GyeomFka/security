@@ -4,6 +4,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import lombok.RequiredArgsConstructor;
@@ -36,9 +37,9 @@ public class IndexController {
 	public String joinProc(User user) {
 		System.out.println(" ::: param user : " + user.toString() + " ::: ");
 		user.setRole("ROLE_USER");
+
 		//패스워드가 암호화 되지 않으면 security로그인이 불건웅
-		String rawPassword = user.getPassword();
-		String encPassword = encoder.encode(rawPassword);
+		String encPassword = encoder.encode(user.getPassword());
 		user.setPassword(encPassword);
 
 		userRepository.save(user);
@@ -46,17 +47,17 @@ public class IndexController {
 	}
 
 	@GetMapping("/user")
-	public String user() {
+	public @ResponseBody String user() {
 		return "user";
 	}
 
 	@GetMapping("/admin")
-	public String admin() {
+	public @ResponseBody String admin() {
 		return "admin";
 	}
 
 	@GetMapping("/manager")
-	public String manager() {
+	public @ResponseBody String manager() {
 		return "manager";
 	}
 }

@@ -8,4 +8,5 @@ import modulestudy.sample.model.User;
 //jparepo를 상속했기때문에 IoC가 건웅
 public interface UserRepository extends JpaRepository<User, Long> {
 
+	public User findByUsername(String username);
 }
