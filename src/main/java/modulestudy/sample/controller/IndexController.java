@@ -22,22 +22,7 @@ public class IndexController {
 		return "index";
 	}
 
-	@GetMapping("/user")
-	public String user() {
-		return "user";
-	}
-
-	@GetMapping("/admin")
-	public String admin() {
-		return "admin";
-	}
-
-	@GetMapping("/manager")
-	public String manager() {
-		return "manager";
-	}
-
-	@GetMapping("/loginForm") // security가 해당 주소를 낚아챔 -> SecurityConfig 파일 생성 후 작동안함.
+	@GetMapping("/loginForm") // {url : /login} security가 해당 주소를 낚아챔 -> SecurityConfig 파일 생성 후 작동안함.
 	public String login() {
 		return "loginForm";
 	}
@@ -60,4 +45,18 @@ public class IndexController {
 		return "redirect:/loginForm";
 	}
 
+	@GetMapping("/user")
+	public String user() {
+		return "user";
+	}
+
+	@GetMapping("/admin")
+	public String admin() {
+		return "admin";
+	}
+
+	@GetMapping("/manager")
+	public String manager() {
+		return "manager";
+	}
 }
