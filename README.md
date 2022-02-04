@@ -6,7 +6,8 @@
 - 2강 - 시큐리티 설정 [V]
 - 3강 - 시큐리티 회원가입 [V]
 - 4강 - 시큐리티 로그인 [V]
-- 5강 - 시큐리티 권한처리
+- 5강 - 시큐리티 권한처리 [V]
+- [선수강좌 - OAuth2.0 개념이해](https://www.youtube.com/watch?v=JBN5dCnLYnY&list=PL93mKxaRDidECgjOBjPgI3Dyo8ka6Ilqm&index=65) 
 - 6강 - 구글 로그인 준비
 - 7강 - 구글 회원 프로필 정보 받아보기
 - 8강 - Authentication객체가 가질수 있는 2가지 타입

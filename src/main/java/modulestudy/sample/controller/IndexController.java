@@ -1,5 +1,7 @@
 package modulestudy.sample.controller;
 
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -59,5 +61,17 @@ public class IndexController {
 	@GetMapping("/manager")
 	public @ResponseBody String manager() {
 		return "manager";
+	}
+
+	@Secured("ROLE_ADMIN")
+	@GetMapping("/info")
+	public @ResponseBody String info() {
+		return "개인정보";
+	}
+
+	@PreAuthorize("hasRole('ROLE_MANAGER') or hasRole('ROLE_ADMIN')") //data method 실행 직전에 실행이 된다
+	@GetMapping("/data")
+	public @ResponseBody String data() {
+		return "데이터";
 	}
 }
