@@ -2,7 +2,11 @@ package modulestudy.sample.controller;
 
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import lombok.RequiredArgsConstructor;
+import modulestudy.sample.config.auth.PrincipalDetails;
 import modulestudy.sample.model.User;
 import modulestudy.sample.repository.UserRepository;
 
@@ -19,6 +24,28 @@ public class IndexController {
 
 	private final UserRepository userRepository;
 	private final BCryptPasswordEncoder encoder;
+
+	@GetMapping("/test/login")
+	public @ResponseBody String testLogin(Authentication authentication) {
+
+		System.out.println(" ::: /test/login :::");
+		OAuth2User oAuth2User = (OAuth2User)authentication.getPrincipal();
+		System.out.println("principal detail : " + oAuth2User.getAttributes());
+
+		return "OAuth 세션확인";
+	}
+
+	@GetMapping("/test/oauth/login")
+	public @ResponseBody String testOauthLogin(Authentication authentication,
+		@AuthenticationPrincipal PrincipalDetails userDetails) {
+
+		System.out.println(" ::: /test/login :::");
+		PrincipalDetails principalDetails = (PrincipalDetails)authentication.getPrincipal();
+		System.out.println("principal detail : " + principalDetails.getUser());
+		System.out.println("userDetails : " + userDetails.getUser());
+
+		return "세션확인";
+	}
 
 	@GetMapping({"", "/"})
 	public String index() {

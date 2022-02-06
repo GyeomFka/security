@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import lombok.Data;
 import modulestudy.sample.model.User;
 
 // security -> /login url 을 받아 로그인을 진행
@@ -14,6 +15,7 @@ import modulestudy.sample.model.User;
 // Authentication 내부 User 정보가 있어야 함
 // User타입 -> UserDetail 타입의 객체
 // Security Session -> Authentication -> UserDetails(this 객체 PrincipalDetails)
+@Data
 public class PrincipalDetails implements UserDetails {
 
 	private User user;

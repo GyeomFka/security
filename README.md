@@ -8,8 +8,8 @@
 - 4강 - 시큐리티 로그인 [V]
 - 5강 - 시큐리티 권한처리 [V]
 - [선수강좌 - OAuth2.0 개념이해](https://www.youtube.com/watch?v=JBN5dCnLYnY&list=PL93mKxaRDidECgjOBjPgI3Dyo8ka6Ilqm&index=65) [V] 
-- 6강 - 구글 로그인 준비
-- 7강 - 구글 회원 프로필 정보 받아보기
+- 6강 - 구글 로그인 준비 [V]
+- 7강 - 구글 회원 프로필 정보 받아보기 [V]
 - 8강 - Authentication객체가 가질수 있는 2가지 타입
 - 9강 - 구글 로그인 및 자동 회원가입 진행 완료
 - 10강 - 페이스북 로그인 완료
@@ -20,16 +20,16 @@
 - 15강 - JWT를 이해하기전 RSA에 대해서 알아보자
 - 16강 - JWT를 이해하기전 RFC문서란
 - 17강 - JWT 구조 이해
-- 19강 - jwt를 위한 yml파일 세팅
+- 19강 - JWT를 위한 yml파일 세팅
 - 18강 - JWT 프로젝트 세팅
-- 20강 - jwt를 위한 security 설정
-- 21강 - jwt Bearer 인증 방식
-- 22강 jwt FIlter 등록 테스트
-- 23강 - jwt 임시 토큰 만들어서 테스트 해보기
-- 24강 - jwt를 위한 로그인 시도
-- 25강 - jwt를 위한 강제 로그인 진행
-- 26강 - jwt토큰 만들어서 응답하기
-- 27강마지막 jwt토큰 서버 구축 완료
+- 20강 - JWT를 위한 security 설정
+- 21강 - JWT Bearer 인증 방식
+- 22강 - JWT FIlter 등록 테스트
+- 23강 - JWT 임시 토큰 만들어서 테스트 해보기
+- 24강 - JWT를 위한 로그인 시도
+- 25강 - JWT를 위한 강제 로그인 진행
+- 26강 - JWT토큰 만들어서 응답하기
+- 27강 - JWT토큰 서버 구축 완료
 
 ### OAuth2.0 정리
 - 실제 User 1개 / Web상의 고유 유저 - 가입한 서버 만큼 N개
@@ -57,3 +57,6 @@
 ### Spring 공식 OAuth - client 라이브러리
 - Facebook
 - google
+
+### 시큐리티 큰 그림
+- Security session
